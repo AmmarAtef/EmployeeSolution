@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="ab5336e6-9743-4173-87fc-2a18380d32ba" SharePointProductVersion="16.0">
+  <Assemblies>
+    <Assembly Location="Employee.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="Employee_Employee\Feature.xml" />
+  </FeatureManifests>
+</Solution>

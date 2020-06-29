@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Field
+		 ID="{45440863-9ab0-461b-8d35-6ca8fb042578}"
+		 Name="EmployeeName"
+		 DisplayName="Name"
+		 StaticName="Name"
+		 Type="Text"
+		 Required="TRUE"
+		 Group="Custom Site Columns"
+		 Overwrite="TRUE"
+		 AllowDeletion="TRUE"
+		 OverwriteInChildScopes="TRUE"
+		 MaxLength="100"
+		 Min="20"  ShowInViewForms="TRUE" ShowAlways="TRUE" ShowInDisplayForm="TRUE" ShowField="TRUE">
+		<Validation>=LEN([Name])&gt;20</Validation>
+	</Field>
+	<Field
+		ID ="{888FA173-7829-4C23-B58F-B1B8D6A737CC}"
+		Name="EmployeeBirthdate"
+		DisplayName="Birthdate"
+		Type="DateTime"
+		Format="DateOnly"
+		Required="TRUE"
+		 Overwrite="TRUE"
+		 AllowDeletion="TRUE"
+		OverwriteInChildScopes="TRUE"
+		 Group="Custom Site Columns"  ShowInViewForms="TRUE" ShowAlways="TRUE" ShowInDisplayForm="TRUE" ShowField="TRUE"
+		>
+		<Validation>=DATEDIF([Birthdate], TODAY(),"d")&gt;1</Validation>
+		<!--<Validation>=[Birthdate] &lt; TODAY()</Validation>-->
+		<Default>[today]</Default>
+	</Field>
+	<Field Format="RadioButtons"
+	   ID="{C222F633-D844-4E06-9200-B1AEE3F31C3B}"
+	   Type ="Choice"
+       Name ="EmployeeGender"
+       DisplayName ="Gender"
+       Group ="Custom Site Columns"
+		   OverwriteInChildScopes="TRUE"
+       Required ="TRUE"
+       AllowDeletion ="TRUE"
+       Overwrite ="TRUE">
+		<CHOICES>
+			<CHOICE>Male</CHOICE>
+			<CHOICE>Female</CHOICE>
+		</CHOICES>
+	</Field>
+
+	<Field
+		   ID="{B5BE6787-D38A-4C07-A1E0-7A9976579948}"
+		   Type ="Currency"
+		   Name ="EmployeeSalary"
+		   DisplayName ="Salary"
+		   Group ="Custom Site Columns"
+		   Required ="TRUE"
+		   AllowDeletion ="TRUE"
+		   Overwrite ="TRUE"
+		   OverwriteInChildScopes="TRUE"
+		   Decimals="2"
+           Min="0"
+	>
+	</Field>
+
+	<Field
+		   ID="{937BFDB8-4620-4F26-8951-E847ABF9CAC2}"
+		   Type ="Choice"
+		   Format="Dropdown"
+		   Name ="EmployeeDepartment"
+		   DisplayName ="Department"
+		   Group ="Custom Site Columns"
+		   Required ="TRUE"
+		   AllowDeletion ="TRUE"
+		   Overwrite ="TRUE"
+		OverwriteInChildScopes="TRUE">
+		<CHOICES>
+			<CHOICE>HR</CHOICE>
+			<CHOICE>IT</CHOICE>
+			<CHOICE>DEV</CHOICE>
+		</CHOICES>
+	</Field>
+
+	<Field  ID="{0C39A936-6877-46F1-8D5D-E2AFF64BA581}"
+			Type ="Note"
+			Name ="BriefOfExperience"
+			DisplayName ="Brief of experience"
+			Group ="Custom Site Columns"
+			Required ="FALSE"
+			AllowDeletion ="TRUE"
+			MaxLength="1000"
+			Overwrite ="TRUE"
+		OverwriteInChildScopes="TRUE" ShowInViewForms="TRUE" ShowAlways="TRUE" ShowInDisplayForm="TRUE" ShowField="TRUE" >
+		>
+	</Field>
+	<Field Type="URL"
+		   ID="{A4B3A924-9B30-46CF-A51F-6E2FA1A197D7}"
+		   Format="Hyperlink"
+		   Name="ProfileURL"
+		   DisplayName="Profile URL"
+		   OverwriteInChildScopes="TRUE" 
+		   Overwrite="TRUE"
+		   AllowDeletion="TRUE"
+		   Group ="Custom Site Columns" ShowInViewForms="TRUE"
+			>
+	</Field>
+
+
+</Elements>

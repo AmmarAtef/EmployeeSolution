@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="EmployeeWebParts Feature" Id="32b1fd95-e2c5-45c8-b5bb-610c00bbbec7" Scope="Site">
+  <ElementManifests>
+    <ElementManifest Location="CreateEmployee\Elements.xml" />
+    <ElementFile Location="CreateEmployee\CreateEmployee.webpart" />
+    <ElementManifest Location="ListEmployees\Elements.xml" />
+    <ElementFile Location="ListEmployees\ListEmployees.webpart" />
+    <ElementManifest Location="UpdateEmployee\Elements.xml" />
+    <ElementFile Location="UpdateEmployee\UpdateEmployee.webpart" />
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="5c88d00a-40c7-4c1c-ad48-ca5b8ba3a0a6" SharePointProductVersion="16.0">
+  <Assemblies>
+    <Assembly Location="EmployeeWebParts.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="EmployeeWebParts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=00c386ec3f795339" Namespace="EmployeeWebParts.WebParts.CreateEmployee" TypeName="*" />
+        <SafeControl Assembly="EmployeeWebParts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=00c386ec3f795339" Namespace="EmployeeWebParts.WebParts.ListEmployees" TypeName="*" />
+        <SafeControl Assembly="EmployeeWebParts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=00c386ec3f795339" Namespace="EmployeeWebParts.WebParts.UpdateEmployee" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="EmployeeWebParts_EmployeeWebParts\Feature.xml" />
+  </FeatureManifests>
+</Solution>

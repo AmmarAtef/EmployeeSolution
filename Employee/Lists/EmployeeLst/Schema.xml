@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="EmployeeLst" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/EmployeeLst" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      
+    <ContentType ID="0x01009FAA8F9E00D34612B44916277161DD19" Name="EmployeeCT" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          
+          
+          
+          
+          
+          
+          
+        <FieldRef ID="{45440863-9ab0-461b-8d35-6ca8fb042578}" DisplayName="EmployeeName" Required="TRUE" Name="Name" /><FieldRef ID="{0C39A936-6877-46F1-8D5D-E2AFF64BA581}" DisplayName="Brief of experience" Required="FALSE" Name="BriefOfExperience " /><FieldRef ID="{888FA173-7829-4C23-B58F-B1B8D6A737CC}" DisplayName="EmployeeBirthdate" Required="TRUE" Name="Birthdate" Format="DateOnly" /><FieldRef ID="{C222F633-D844-4E06-9200-B1AEE3F31C3B}" DisplayName="Gender" Required="TRUE" Name="EmployeeGender" Format="RadioButtons" /><FieldRef ID="{B5BE6787-D38A-4C07-A1E0-7A9976579948}" DisplayName="Salary" Required="TRUE" Name="EmployeeSalary" /><FieldRef ID="{937BFDB8-4620-4F26-8951-E847ABF9CAC2}" DisplayName="Department" Required="TRUE" Name="EmployeeDepartment" Format="Dropdown" /><FieldRef ID="{A4B3A924-9B30-46CF-A51F-6E2FA1A197D7}" DisplayName="Profile URL" Name="ProfileURL" Format="Hyperlink" /></FieldRefs>
+      </ContentType></ContentTypes>
+    <Fields><Field ID="{45440863-9ab0-461b-8d35-6ca8fb042578}" Name="EmployeeName" DisplayName="Name" StaticName="Name" Type="Text" Required="TRUE" Group="Custom Site Columns" Overwrite="TRUE" AllowDeletion="TRUE" OverwriteInChildScopes="TRUE" MaxLength="100" Min="20" ShowInViewForms="TRUE" ShowAlways="TRUE" ShowInDisplayForm="TRUE" ShowField="TRUE"><Validation>=LEN([Name])&gt;20</Validation></Field><Field Format="RadioButtons" ID="{C222F633-D844-4E06-9200-B1AEE3F31C3B}" Type="Choice" Name="EmployeeGender" DisplayName="Gender" Group="Custom Site Columns" OverwriteInChildScopes="TRUE" Required="TRUE" AllowDeletion="TRUE" Overwrite="TRUE"><CHOICES><CHOICE>Male</CHOICE><CHOICE>Female</CHOICE></CHOICES></Field><Field ID="{937BFDB8-4620-4F26-8951-E847ABF9CAC2}" Type="Choice" Format="Dropdown" Name="EmployeeDepartment" DisplayName="Department" Group="Custom Site Columns" Required="TRUE" AllowDeletion="TRUE" Overwrite="TRUE" OverwriteInChildScopes="TRUE"><CHOICES><CHOICE>HR</CHOICE><CHOICE>IT</CHOICE><CHOICE>DEV</CHOICE></CHOICES></Field><Field Type="URL" ID="{A4B3A924-9B30-46CF-A51F-6E2FA1A197D7}" Format="Hyperlink" Name="ProfileURL" DisplayName="Profile URL" OverwriteInChildScopes="TRUE" Overwrite="TRUE" AllowDeletion="TRUE" Group="Custom Site Columns" ShowInViewForms="TRUE"></Field><Field ID="{0C39A936-6877-46F1-8D5D-E2AFF64BA581}" Type="Note" Name="BriefOfExperience" DisplayName="Brief of experience" Group="Custom Site Columns" Required="FALSE" AllowDeletion="TRUE" MaxLength="1000" Overwrite="TRUE" OverwriteInChildScopes="TRUE" ShowInViewForms="TRUE" ShowAlways="TRUE" ShowInDisplayForm="TRUE" ShowField="TRUE">
+		&gt;
+	</Field><Field ID="{888FA173-7829-4C23-B58F-B1B8D6A737CC}" Name="EmployeeBirthdate" DisplayName="Birthdate" Type="DateTime" Format="DateOnly" Required="TRUE" Overwrite="TRUE" AllowDeletion="TRUE" OverwriteInChildScopes="TRUE" Group="Custom Site Columns" ShowInViewForms="TRUE" ShowAlways="TRUE" ShowInDisplayForm="TRUE" ShowField="TRUE"><Validation>=DATEDIF([Birthdate], TODAY(),"d")&gt;1</Validation><!--<Validation>=[Birthdate] &lt; TODAY()</Validation>--><Default>[today]</Default></Field><Field ID="{B5BE6787-D38A-4C07-A1E0-7A9976579948}" Type="Currency" Name="EmployeeSalary" DisplayName="Salary" Group="Custom Site Columns" Required="TRUE" AllowDeletion="TRUE" Overwrite="TRUE" OverwriteInChildScopes="TRUE" Decimals="2" Min="0"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields><FieldRef Name="EmployeeName" /><FieldRef Name="EmployeeGender" /><FieldRef Name="EmployeeDepartment" /><FieldRef Name="ProfileURL" /><FieldRef Name="BriefOfExperience" /><FieldRef Name="EmployeeBirthdate" /><FieldRef Name="EmployeeSalary" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

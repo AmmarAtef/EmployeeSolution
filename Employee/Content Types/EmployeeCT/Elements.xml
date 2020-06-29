@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType Hidden="FALSE" ID="0x01009FAA8F9E00D34612B44916277161DD19" Name="EmployeeCT" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{45440863-9ab0-461b-8d35-6ca8fb042578}" DisplayName="Name" Required="TRUE" Name="Name" />
+      <FieldRef ID="{0C39A936-6877-46F1-8D5D-E2AFF64BA581}" DisplayName="Brief of experience" Required="FALSE" Name="BriefOfExperience" />
+      <FieldRef ID="{888FA173-7829-4C23-B58F-B1B8D6A737CC}" DisplayName="Birthdate" Required="TRUE" Name="Birthdate" Format="DateOnly" />
+      <FieldRef ID="{C222F633-D844-4E06-9200-B1AEE3F31C3B}" DisplayName="Gender" Required="TRUE" Name="EmployeeGender" Format="RadioButtons" />
+      <FieldRef ID="{B5BE6787-D38A-4C07-A1E0-7A9976579948}" DisplayName="Salary" Required="TRUE" Name="EmployeeSalary" />
+      <FieldRef ID="{937BFDB8-4620-4F26-8951-E847ABF9CAC2}" DisplayName="Department" Required="TRUE" Name="EmployeeDepartment" Format="Dropdown" />
+      <FieldRef ID="{A4B3A924-9B30-46CF-A51F-6E2FA1A197D7}" DisplayName="Profile URL" Name="ProfileURL" Format="Hyperlink" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

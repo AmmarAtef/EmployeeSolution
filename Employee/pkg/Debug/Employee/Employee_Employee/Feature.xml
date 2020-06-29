@@ -1,0 +1,14 @@
+﻿<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="Employee Feature1" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="TRUE" Id="aeecbead-b32a-4ae9-bd15-248eb24a03f9" Scope="Site" Version="1.0.0.1">
+  <ElementManifests>
+    <ElementManifest Location="EmployeeSiteColumns\Elements.xml" />
+    <ElementManifest Location="EmployeeCT\Elements.xml" />
+    <ElementManifest Location="EmployeeInstance\Elements.xml" />
+    <ElementManifest Location="EmployeeLst\Elements.xml" />
+    <ElementFile Location="EmployeeLst\Schema.xml" />
+    <ElementManifest Location="List1Instance\Elements.xml" />
+    <ElementManifest Location="List1\Elements.xml" />
+    <ElementFile Location="List1\Schema.xml" />
+  </ElementManifests>
+</Feature>
+
+
